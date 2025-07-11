@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -56,7 +55,7 @@ const Index = () => {
     },
     {
       title: "MCP Server Automation",
-      date: "Jun 2025",
+      date: "Jun 2025", 
       description: "Connected Claude and ChatGPT to MCP servers. Sends automated emails, posts YouTube comments, and uploads images to Google Drive.",
       tech: ["AI Integration", "Automation", "APIs"]
     },
@@ -211,8 +210,12 @@ const Index = () => {
           <div className="text-center animate-fade-in">
             <div className="mb-8">
               <div className="w-48 h-48 mx-auto mb-8 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 p-1 animate-float">
-                <div className="w-full h-full rounded-full bg-slate-900 flex items-center justify-center">
-                  <User className="w-20 h-20 text-purple-400" />
+                <div className="w-full h-full rounded-full overflow-hidden bg-slate-900">
+                  <img 
+                    src="/lovable-uploads/6a87d19a-c2bd-4caf-834a-4a4f37f602ea.png" 
+                    alt="S Rakesh - Full Stack Developer"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
               </div>
             </div>
