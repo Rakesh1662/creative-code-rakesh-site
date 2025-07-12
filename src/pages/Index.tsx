@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -40,48 +41,85 @@ const Index = () => {
   ];
 
   const skills = {
-    languages: ['Java', 'C', 'C++', 'PL/SQL'],
-    web: ['HTML', 'CSS', 'JavaScript'],
-    database: ['MySQL'],
-    tools: ['Git', 'VS Code', 'Postman']
+    languages: ['Java', 'C', 'C++', 'PL/SQL', 'Python'],
+    web: ['Bootstrap', 'Tailwind', 'HTML', 'CSS', 'JavaScript'],
+    database: ['MySQL', 'MongoDB', 'Cloud Firestore'],
+    tools: ['Git', 'VS Code', 'Postman', 'Firebase Studio', 'Eclipse IDE']
   };
 
   const projects = [
     {
+      title: "Virtual Bank – Full Stack App using Firebase",
+      date: "2024",
+      description: "Built a responsive Virtual Banking application using Firebase Studio as backend. Users can securely perform transactions through a clean and intuitive interface. Admins can credit funds, automatically applying a 1% commission on every transaction.",
+      tech: ["Firebase", "HTML", "CSS", "JavaScript", "Netlify", "Render"],
+      features: ["Real-time balance updates", "Secure authentication", "Transaction history"],
+      github: "https://github.com/Rakesh1662",
+      demo: "https://github.com/Rakesh1662"
+    },
+    {
+      title: "Story Weaver – Generative AI App",
+      date: "2024",
+      description: "A full-stack storytelling platform created using Lovable AI tools. Integrated Hugging Face, Gemini, and OpenAI APIs to generate unique, real-time, AI-powered stories. Users can generate story plots, get character suggestions, and read or download AI-generated tales.",
+      tech: ["Lovable AI", "Hugging Face API", "Gemini API", "OpenAI API", "HTML/CSS/JS"],
+      github: "https://github.com/Rakesh1662",
+      demo: "https://github.com/Rakesh1662"
+    },
+    {
+      title: "Trend Mate – Real-Time Dashboard App",
+      date: "2024", 
+      description: "Developed a real-time insights dashboard that pulls data from multiple public APIs. Features weather reports, cryptocurrency prices, stock market updates, and latest trending news with widget-like components.",
+      tech: ["OpenWeather API", "News API", "Crypto & Stocks APIs", "JavaScript", "HTML/CSS"],
+      github: "https://github.com/Rakesh1662",
+      demo: "https://github.com/Rakesh1662"
+    },
+    {
       title: "Countries & Places RAG App using N8N",
       date: "Jun 2025",
       description: "Built a chatbot using RAG and N8N to fetch countries' top attractions from a large dataset, enabling quick travel insights.",
-      tech: ["RAG", "N8N", "AI/ML"]
+      tech: ["RAG", "N8N", "AI/ML"],
+      github: "https://github.com/Rakesh1662/RAG-using-N8N",
+      demo: "https://github.com/Rakesh1662/RAG-using-N8N"
     },
     {
       title: "MCP Server Automation",
       date: "Jun 2025", 
       description: "Connected Claude and ChatGPT to MCP servers. Sends automated emails, posts YouTube comments, and uploads images to Google Drive.",
-      tech: ["AI Integration", "Automation", "APIs"]
+      tech: ["AI Integration", "Automation", "APIs"],
+      github: "https://github.com/Rakesh1662",
+      demo: "https://github.com/Rakesh1662"
     },
     {
       title: "Crop Wise using Gen AI",
       date: "2024",
       description: "An AI tool using Relume AI, Figma, and Lovable to identify crop diseases from images and suggest fertilizers.",
-      tech: ["Gen AI", "Computer Vision", "Agriculture Tech"]
+      tech: ["Gen AI", "Computer Vision", "Agriculture Tech"],
+      github: "https://github.com/Rakesh1662/crop-wise-solutions-27",
+      demo: "https://github.com/Rakesh1662/crop-wise-solutions-27"
     },
     {
       title: "Crop Yield Prediction",
       date: "2024",
       description: "Web-based ML tool predicting crop yield from inputs like year, area, and climate. Helps farmers make data-driven decisions.",
-      tech: ["Machine Learning", "Web Development", "Agriculture"]
+      tech: ["Machine Learning", "Web Development", "Agriculture"],
+      github: "https://github.com/Rakesh1662",
+      demo: "https://github.com/Rakesh1662"
     },
     {
       title: "Drug Recommendation System",
       date: "2024",
       description: "NLP & Deep Learning-powered system that recommends drugs based on patient reviews and sentiment classification.",
-      tech: ["NLP", "Deep Learning", "Healthcare"]
+      tech: ["NLP", "Deep Learning", "Healthcare"],
+      github: "https://github.com/Rakesh1662/Drug_Recommendation_System_using_Sentimental_Analysis",
+      demo: "https://github.com/Rakesh1662/Drug_Recommendation_System_using_Sentimental_Analysis"
     },
     {
       title: "Image Denoising using Deep Learning",
-      date: "2024",
+      date: "Currently Working",
       description: "Hybrid model combining CNNs with Wavelet Transforms to clean noisy images.",
-      tech: ["Deep Learning", "Computer Vision", "CNN"]
+      tech: ["Deep Learning", "Computer Vision", "CNN"],
+      github: "https://github.com/Rakesh1662",
+      demo: "https://github.com/Rakesh1662"
     }
   ];
 
@@ -136,6 +174,16 @@ const Index = () => {
     setIsMenuOpen(false);
   };
 
+  const handleResumeDownload = () => {
+    // Create a link element and trigger download of the resume image
+    const link = document.createElement('a');
+    link.href = '/lovable-uploads/acde27e2-c008-45f0-985c-290cc97c100e.png';
+    link.download = 'S_Rakesh_Resume.png';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Navigation */}
@@ -163,6 +211,7 @@ const Index = () => {
                 variant="outline"
                 size="sm"
                 className="border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white"
+                onClick={handleResumeDownload}
               >
                 <Download className="w-4 h-4 mr-2" />
                 Resume
@@ -194,6 +243,7 @@ const Index = () => {
                 variant="outline"
                 size="sm"
                 className="mt-2 border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white"
+                onClick={handleResumeDownload}
               >
                 <Download className="w-4 h-4 mr-2" />
                 Resume
@@ -344,6 +394,10 @@ const Index = () => {
                   </h3>
                   <div className="space-y-2">
                     <div className="flex justify-between">
+                      <span className="text-white/80">Hindi</span>
+                      <span className="text-purple-400">Intermediate</span>
+                    </div>
+                    <div className="flex justify-between">
                       <span className="text-white/80">Telugu</span>
                       <span className="text-purple-400">Native</span>
                     </div>
@@ -478,12 +532,25 @@ const Index = () => {
                 <CardContent className="p-6">
                   <div className="flex justify-between items-start mb-4">
                     <h3 className="text-xl font-semibold text-white leading-tight">{project.title}</h3>
-                    <Badge variant="outline" className="border-purple-400/50 text-purple-300 text-xs">
+                    <Badge variant="outline" className={`border-purple-400/50 text-xs ${
+                      project.date === 'Currently Working' ? 'text-green-300 border-green-400/50' : 'text-purple-300'
+                    }`}>
                       {project.date}
                     </Badge>
                   </div>
                   
                   <p className="text-white/70 mb-4 leading-relaxed">{project.description}</p>
+                  
+                  {project.features && (
+                    <div className="mb-4">
+                      <p className="text-sm font-medium text-purple-300 mb-2">Features:</p>
+                      <ul className="text-sm text-white/60 space-y-1">
+                        {project.features.map((feature, idx) => (
+                          <li key={idx}>• {feature}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
                   
                   <div className="flex flex-wrap gap-2 mb-4">
                     {project.tech.map((tech) => (
@@ -494,13 +561,17 @@ const Index = () => {
                   </div>
                   
                   <div className="flex gap-2">
-                    <Button size="sm" variant="outline" className="border-purple-400/50 text-purple-300 hover:bg-purple-400 hover:text-white flex-1">
-                      <Github className="w-4 h-4 mr-2" />
-                      Code
+                    <Button size="sm" variant="outline" className="border-purple-400/50 text-purple-300 hover:bg-purple-400 hover:text-white flex-1" asChild>
+                      <a href={project.github} target="_blank" rel="noopener noreferrer">
+                        <Github className="w-4 h-4 mr-2" />
+                        Code
+                      </a>
                     </Button>
-                    <Button size="sm" variant="outline" className="border-blue-400/50 text-blue-300 hover:bg-blue-400 hover:text-white flex-1">
-                      <ExternalLink className="w-4 h-4 mr-2" />
-                      Demo
+                    <Button size="sm" variant="outline" className="border-blue-400/50 text-blue-300 hover:bg-blue-400 hover:text-white flex-1" asChild>
+                      <a href={project.demo} target="_blank" rel="noopener noreferrer">
+                        <ExternalLink className="w-4 h-4 mr-2" />
+                        Demo
+                      </a>
                     </Button>
                   </div>
                 </CardContent>
