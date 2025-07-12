@@ -41,10 +41,10 @@ const Index = () => {
   ];
 
   const skills = {
-    languages: ['Java', 'C', 'C++', 'PL/SQL', 'Python'],
+    languages: ['Java', 'C', 'C++', 'PL/SQL', 'Python', 'Data Structures'],
     web: ['Bootstrap', 'Tailwind', 'HTML', 'CSS', 'JavaScript'],
     database: ['MySQL', 'MongoDB', 'Cloud Firestore'],
-    tools: ['Git', 'VS Code', 'Postman', 'Firebase Studio', 'Eclipse IDE']
+    tools: ['Git', 'VS Code', 'Postman', 'Firebase Studio', 'Eclipse IDE', 'GitHub']
   };
 
   const projects = [
@@ -54,24 +54,24 @@ const Index = () => {
       description: "Built a responsive Virtual Banking application using Firebase Studio as backend. Users can securely perform transactions through a clean and intuitive interface. Admins can credit funds, automatically applying a 1% commission on every transaction.",
       tech: ["Firebase", "HTML", "CSS", "JavaScript", "Netlify", "Render"],
       features: ["Real-time balance updates", "Secure authentication", "Transaction history"],
-      github: "https://github.com/Rakesh1662",
-      demo: "https://github.com/Rakesh1662"
+      github: "https://github.com/Rakesh1662/Virtual_Bank",
+      demo: "https://virtualbankbypsr.netlify.app/login"
     },
     {
       title: "Story Weaver – Generative AI App",
       date: "2024",
       description: "A full-stack storytelling platform created using Lovable AI tools. Integrated Hugging Face, Gemini, and OpenAI APIs to generate unique, real-time, AI-powered stories. Users can generate story plots, get character suggestions, and read or download AI-generated tales.",
       tech: ["Lovable AI", "Hugging Face API", "Gemini API", "OpenAI API", "HTML/CSS/JS"],
-      github: "https://github.com/Rakesh1662",
-      demo: "https://github.com/Rakesh1662"
+      github: "https://github.com/Rakesh1662/emoti-tale-craft?tab=readme-ov-file",
+      demo: "https://lovable.dev/projects/3856ffd9-fa5f-4290-a26c-b1097d8a6ee3"
     },
     {
       title: "Trend Mate – Real-Time Dashboard App",
       date: "2024", 
       description: "Developed a real-time insights dashboard that pulls data from multiple public APIs. Features weather reports, cryptocurrency prices, stock market updates, and latest trending news with widget-like components.",
       tech: ["OpenWeather API", "News API", "Crypto & Stocks APIs", "JavaScript", "HTML/CSS"],
-      github: "https://github.com/Rakesh1662",
-      demo: "https://github.com/Rakesh1662"
+      github: "https://github.com/Rakesh1662/trendmate-daily-spark",
+      demo: "https://lovable.dev/projects/b3c3aab8-6e0f-4126-ad2b-6ca91d8da9f7"
     },
     {
       title: "Countries & Places RAG App using N8N",
@@ -102,7 +102,7 @@ const Index = () => {
       date: "2024",
       description: "Web-based ML tool predicting crop yield from inputs like year, area, and climate. Helps farmers make data-driven decisions.",
       tech: ["Machine Learning", "Web Development", "Agriculture"],
-      github: "https://github.com/Rakesh1662",
+      github: "https://github.com/Rakesh1662/Crop-Yield-Prediction-",
       demo: "https://github.com/Rakesh1662"
     },
     {
